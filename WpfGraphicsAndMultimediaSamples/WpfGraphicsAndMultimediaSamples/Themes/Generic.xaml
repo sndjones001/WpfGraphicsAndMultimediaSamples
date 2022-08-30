@@ -1,0 +1,24 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <FontFamily x:Key="DefaultFont">Segoe UI</FontFamily>
+    <FontFamily x:Key="CodeFont">Cascadia Code</FontFamily>
+    
+    <system:Double x:Key="DefaultFontSize">14</system:Double>
+    <system:Double x:Key="HeaderFontSize">25</system:Double>
+    <system:Double x:Key="CodeTextFontSize">15</system:Double>
+    <system:Double x:Key="MenuTextFontSize">15</system:Double>
+    <system:Double x:Key="HighlightCalculatedTextBlockFontSize">18</system:Double>
+
+    <SolidColorBrush x:Key="CodeTextClassColor">#0065b3</SolidColorBrush>
+    <SolidColorBrush x:Key="TableBoderColor">SteelBlue</SolidColorBrush>
+
+    <FontWeight x:Key="HeaderFontWeight">SemiBold</FontWeight>
+
+    <FontStyle x:Key="HighlightFontStyle">Italic</FontStyle>
+
+    <Thickness x:Key="TableBorderThickness">1</Thickness>
+    <Thickness x:Key="TableCellPadding">5</Thickness>
+
+    <DashStyle x:Key="DashDefault" Dashes="2,4"></DashStyle>
+</ResourceDictionary>
