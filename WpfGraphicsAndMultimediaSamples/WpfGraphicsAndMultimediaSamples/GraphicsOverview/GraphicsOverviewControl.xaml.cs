@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfGraphicsAndMultimediaSamples.GraphicsEffects
+namespace WpfGraphicsAndMultimediaSamples.GraphicsOverview
 {
     /// <summary>
-    /// Interaction logic for MainSectionControl.xaml
+    /// Interaction logic for GraphicsOverviewControl.xaml
     /// </summary>
-    public partial class MainSectionControl : UserControl
+    public partial class GraphicsOverviewControl : UserControl
     {
-        public MainSectionControl()
+        public GraphicsOverviewControl()
         {
             InitializeComponent();
         }

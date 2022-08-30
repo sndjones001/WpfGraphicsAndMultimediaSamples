@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using WpfGraphicsAndMultimediaSamples.GraphicsEffects;
+using WpfGraphicsAndMultimediaSamples.GraphicsOverview;
 
 namespace WpfGraphicsAndMultimediaSamples.Models
 {
@@ -14,57 +15,34 @@ namespace WpfGraphicsAndMultimediaSamples.Models
     {
         private INavigatorViewModel _navigator;
 
-        public ICommand MenuCommand => new RelayCommand<EPageViewControl>(x => _navigator.NavigateTo(x));
+        public ICommand MenuCommand2 => new RelayCommand(() => _navigator.NavigateTo(SelectedItem.GetViewModel()));
 
-        public Dictionary<EPageViewControl, IPageViewModel> PageViewModels { get; private set; }
         public ObservableCollection<NavigationMenuItem> MenuItems { get; set; }
+        public NavigationMenuItem SelectedItem { get; set; }
 
         public NavigationBarViewModel()
         {
-            PageViewModels = new();
-
-            RegisterGraphicsEffectViews();
             CreateMenuItems();
+
+            SelectedItem = MenuItems[0];
         }
 
         public void SetNavigator(INavigatorViewModel navigator) => _navigator = navigator;
-
-        private void RegisterGraphicsEffectViews()
-        {
-            PageViewModels.Add(EPageViewControl.WpfGraphicsEffect, new WpfGraphicsEffectViewModel());
-            PageViewModels.Add(EPageViewControl.WpfGraphicsBlurEffect, new WpfGraphicsBlurEffectViewModel());
-            PageViewModels.Add(EPageViewControl.WpfGraphicsDropShadowEffect, new WpfGraphicsDropShadowEffectViewModel());
-        }
 
         public void CreateMenuItems()
         {
             MenuItems = new()
             {
-                new()
-                {
-                    Content = "Graphics",
-                    Items = new()
-                    {
-                        new()
-                        {
-                            Content = "Effects",
-                            PageType = EPageViewControl.WpfGraphicsEffect,
-                            Items = new()
-                            {
-                                new()
-                                {
-                                    Content = "Blur",
-                                    PageType = EPageViewControl.WpfGraphicsBlurEffect
-                                },
-                                new()
-                                {
-                                    Content = "Drop Shadow",
-                                    PageType = EPageViewControl.WpfGraphicsDropShadowEffect
-                                }
-                            }
-                        }
-                    }
-                }
+                new NavigationMenuItem("Graphics", () => new WpfGraphicsViewModel())
+                    .AddChildren
+                    (
+                        new NavigationMenuItem("Effects", () => new WpfGraphicsEffectViewModel())
+                            .AddChildren
+                            (
+                                new("Blur", () => new WpfGraphicsBlurEffectViewModel()),
+                                new("Drop Shadow", () => new WpfGraphicsDropShadowEffectViewModel())
+                            )
+                     )
             };
         }
     }

@@ -25,7 +25,20 @@ namespace WpfGraphicsAndMultimediaSamples
         {
             IServiceCollection services = new ServiceCollection();
 
+            services.AddTransient<MainWindow>();
+
+            Models.RegisterServices.Register(services);
+            GraphicsOverview.RegisterServices.Register(services);
+            GraphicsEffects.RegisterServices.Register(services);
+            GraphicsBrushes.RegisterServices.Register(services);
+
             return services;
+        }
+
+        private void Application_Startup(object sender, StartupEventArgs e)
+        {
+            MainWindow = _serviceProvider.GetRequiredService<MainWindow>();
+            MainWindow.Show();
         }
     }
 }

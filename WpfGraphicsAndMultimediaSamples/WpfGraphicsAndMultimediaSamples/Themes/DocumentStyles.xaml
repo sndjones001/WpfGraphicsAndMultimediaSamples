@@ -113,4 +113,9 @@
             </MultiTrigger>
         </Style.Triggers>
     </Style>
+
+    <Style TargetType="{x:Type Slider}">
+        <Setter Property="Margin" Value="10,0" />
+    </Style>
+    
 </ResourceDictionary>

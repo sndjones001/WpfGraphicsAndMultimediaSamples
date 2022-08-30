@@ -29,5 +29,13 @@ namespace WpfGraphicsAndMultimediaSamples.CommonControls
 
             trvNavigationMenu.ItemsSource = NavigationBarViewModel.MenuItems;
         }
+
+        private void trvNavigationMenu_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+        {
+            if(e.NewValue is NavigationMenuItem navigationMenuItem)
+            {
+                NavigationBarViewModel.SelectedItem = navigationMenuItem;
+            }
+        }
     }
 }

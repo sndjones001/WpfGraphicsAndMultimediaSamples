@@ -53,7 +53,7 @@
             </Table>
             <Paragraph>
                 Change the Radius using the slider
-                <Slider x:Name="sliderBlurRadius" Margin="10,0" TickPlacement="BottomRight" TickFrequency="1" Maximum="30" Width="300" IsSnapToTickEnabled="True" /> and see the Blur effect
+                <Slider x:Name="sliderBlurRadius" TickFrequency="1" Maximum="30" Width="300" /> and see the Blur effect
             </Paragraph>
         </FlowDocument>
     </FlowDocumentScrollViewer>

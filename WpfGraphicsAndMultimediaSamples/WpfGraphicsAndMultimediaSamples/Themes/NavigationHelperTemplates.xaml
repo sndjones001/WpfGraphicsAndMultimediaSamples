@@ -1,6 +1,10 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:lgeffect="clr-namespace:WpfGraphicsAndMultimediaSamples.GraphicsEffects">
+                    xmlns:lgeffect="clr-namespace:WpfGraphicsAndMultimediaSamples.GraphicsEffects"
+                    xmlns:gbrush="clr-namespace:WpfGraphicsAndMultimediaSamples.GraphicsBrushes"
+                    xmlns:gmain="clr-namespace:WpfGraphicsAndMultimediaSamples.GraphicsOverview"
+                    >
+    <!--#region Wpf Graphics Effects -->
     <DataTemplate DataType="{x:Type lgeffect:WpfGraphicsEffectViewModel}">
         <lgeffect:GraphicsEffectsControl/>
     </DataTemplate>
@@ -10,4 +14,18 @@
     <DataTemplate DataType="{x:Type lgeffect:WpfGraphicsDropShadowEffectViewModel}">
         <lgeffect:DropShadowEffectControl/>
     </DataTemplate>
+    <!--#endregion-->
+
+    <!--#region Wpf Graphics Brush -->
+    <DataTemplate DataType="{x:Type gbrush:WpfGraphicsBrushViewModel}">
+        <gbrush:GraphicsBrushControl/>
+    </DataTemplate>
+    <!--#endregion-->
+
+    <!--#region Wpf Graphics Main -->
+    <DataTemplate DataType="{x:Type gmain:WpfGraphicsViewModel}">
+        <gmain:GraphicsOverviewControl/>
+    </DataTemplate>
+    <!--#endregion-->
+
 </ResourceDictionary>

@@ -23,7 +23,12 @@ namespace WpfGraphicsAndMultimediaSamples.Models
 
         public void NavigateTo(EPageViewControl viewType)
         {
-            SelectedView = NavigationBarView.PageViewModels[viewType];
+            //SelectedView = NavigationBarView.PageViewModels[viewType];
+        }
+
+        public void NavigateTo(IPageViewModel viewType)
+        {
+            SelectedView = viewType;
         }
 
         public MainViewModel(NavigationBarViewModel navigationBarView)

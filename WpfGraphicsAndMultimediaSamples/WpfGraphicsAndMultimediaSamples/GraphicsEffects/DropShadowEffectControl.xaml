@@ -16,8 +16,8 @@
             <Paragraph>
                 Here is an example of Drop shadow effect on display. Control the effect using the below provided parameters:
             </Paragraph>
-            <Paragraph TextAlignment="Center">
-                <Rectangle HorizontalAlignment="Center" Height="50" Margin="5" VerticalAlignment="Top" Width="300" StrokeThickness="2" Fill="AliceBlue">
+            <Paragraph>
+                <Rectangle HorizontalAlignment="Left" Height="50" Margin="5" VerticalAlignment="Top" Width="300" StrokeThickness="2" Fill="AliceBlue">
                     <Rectangle.Effect>
                         <DropShadowEffect Direction="{Binding ElementName=sliderDeDirection, Path=Value}" BlurRadius="{Binding ElementName=sliderDeBlurRadius, Path=Value}" ShadowDepth="10" Color="{Binding ElementName=deClrPicker, Path=SelectedColor}" Opacity="{Binding ElementName=sliderDeOpacity, Path=Value}"/>
                     </Rectangle.Effect>
@@ -26,8 +26,8 @@
             <Table Style="{StaticResource DefaultTable}">
                 <Table.Columns>
                     <TableColumn Width="*" />
-                    <TableColumn Width="*" />
-                    <TableColumn Width="3*" />
+                    <TableColumn Width="0.8*" />
+                    <TableColumn Width="4*" />
                 </Table.Columns>
                 <TableRowGroup>
                     <TableRow Style="{StaticResource TableHeaderRow}">
@@ -58,7 +58,7 @@
                         </TableCell>
                         <TableCell>
                             <Paragraph>
-                                <Slider x:Name="sliderDeDirection" Margin="10,0" TickFrequency="1" Maximum="360" Width="300" IsSnapToTickEnabled="True" Value="315" />
+                                <Slider x:Name="sliderDeDirection" TickFrequency="1" Maximum="360" Width="200" Value="315" />
                             </Paragraph>
                         </TableCell>
                     </TableRow>
@@ -79,7 +79,7 @@
                         </TableCell>
                         <TableCell>
                             <Paragraph>
-                                <Slider x:Name="sliderDeBlurRadius" Margin="10,0" TickFrequency="1" Maximum="100" Width="300" IsSnapToTickEnabled="True" Value="5" />
+                                <Slider x:Name="sliderDeBlurRadius" TickFrequency="1" Maximum="100" Width="300" Value="5" />
                             </Paragraph>
                         </TableCell>
                     </TableRow>
@@ -130,7 +130,7 @@
                         </TableCell>
                         <TableCell>
                             <Paragraph>
-                                <Slider x:Name="sliderDeOpacity" Margin="10,0" TickFrequency="0.1" Minimum="0" Maximum="1" Width="300"  IsSnapToTickEnabled="True" Value="1" />
+                                <Slider x:Name="sliderDeOpacity" TickFrequency="0.1" Minimum="0" Maximum="1" Width="300"  Value="1" />
                             </Paragraph>
                         </TableCell>
                     </TableRow>

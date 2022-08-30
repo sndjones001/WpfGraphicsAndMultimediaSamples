@@ -8,7 +8,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="250"
              DataContext="{Binding}">
-    <TreeView x:Name="trvNavigationMenu" Style="{StaticResource NavigationMenuTreeView}">
+    <TreeView x:Name="trvNavigationMenu" Style="{StaticResource NavigationMenuTreeView}" SelectedItemChanged="trvNavigationMenu_SelectedItemChanged">
         <TreeView.ItemTemplate>
             <HierarchicalDataTemplate DataType="{x:Type models:NavigationMenuItem}" ItemsSource="{Binding Items}">
                 <StackPanel Orientation="Horizontal">
@@ -19,31 +19,8 @@
         <TreeView.ItemContainerStyle>
             <Style TargetType="{x:Type TreeViewItem}" BasedOn="{StaticResource NavigationMenuTreeViewItem}">
                 <Setter Property="models:MouseLeftButtonUp.Command" 
-                    Value="{Binding DataContext.MenuCommand, RelativeSource={RelativeSource AncestorLevel=1, AncestorType=UserControl}}"/>
-                <Setter Property="models:MouseLeftButtonUp.CommandParameter"
-                    Value="{Binding SelectedItem.PageType, ElementName=trvNavigationMenu}"/>
+                    Value="{Binding DataContext.MenuCommand2, RelativeSource={RelativeSource AncestorLevel=1, AncestorType=UserControl}}"/>
             </Style>
         </TreeView.ItemContainerStyle>
-        <!--<TreeViewItem Header="Graphics">
-            <TreeViewItem>
-                <TreeViewItem.Header>
-                    <Button Content="Effects" Command="{Binding MenuCommand}" CommandParameter="{x:Static models:EPageViewControl.WpfGraphicsEffect}" Background="Transparent" BorderThickness="0" HorizontalContentAlignment="Left" />
-                </TreeViewItem.Header>
-                <TreeViewItem >
-                    <TreeViewItem.Header>
-                        <Button Content="Blur" Command="{Binding MenuCommand}" CommandParameter="{x:Static models:EPageViewControl.WpfGraphicsBlurEffect}" Background="Transparent" BorderThickness="0" HorizontalContentAlignment="Left" />
-                    </TreeViewItem.Header>
-                </TreeViewItem>
-                <TreeViewItem>
-                    <TreeViewItem.Header>
-                        <Button Content="Drop Shadow" Command="{Binding MenuCommand}" CommandParameter="{x:Static models:EPageViewControl.WpfGraphicsDropShadowEffect}" Background="Transparent" BorderThickness="0" HorizontalContentAlignment="Left" />
-                    </TreeViewItem.Header>
-                </TreeViewItem>
-            </TreeViewItem>
-        </TreeViewItem>-->
     </TreeView>
-    <!--<StackPanel HorizontalAlignment="Left" Background="White">
-        <Button Content="Blur Effects" Command="{Binding MenuCommand}" CommandParameter="{x:Static models:EPageViewControl.WpfGraphicsBlurEffect}" Background="Transparent" BorderThickness="0" Padding="10,2" HorizontalContentAlignment="Left" />
-        <Button Content="Drop Shadow Effects" Command="{Binding MenuCommand}" CommandParameter="{x:Static models:EPageViewControl.WpfGraphicsDropShadowEffect}" Background="Transparent" BorderThickness="0" Padding="10,2" HorizontalContentAlignment="Left" />
-    </StackPanel>-->
 </UserControl>

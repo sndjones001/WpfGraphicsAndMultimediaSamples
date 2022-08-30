@@ -10,7 +10,7 @@
         <local:RenderCapabilityTierConverter x:Key="RenderCapabilityTierConverter" />
         <local:RenderCapabilityTierTextConverter x:Key="RenderCapabilityTierTextConverter" />
     </UserControl.Resources>
-    <FlowDocumentScrollViewer VerticalScrollBarVisibility="Auto">
+    <FlowDocumentScrollViewer>
         <FlowDocument>
             <Paragraph Style="{StaticResource HeaderParagraph}">
                 Overview
