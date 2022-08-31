@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using WpfGraphicsAndMultimediaSamples.GraphicsBrushes;
 using WpfGraphicsAndMultimediaSamples.GraphicsEffects;
 using WpfGraphicsAndMultimediaSamples.GraphicsOverview;
 
@@ -41,6 +42,14 @@ namespace WpfGraphicsAndMultimediaSamples.Models
                             (
                                 new("Blur", () => new WpfGraphicsBlurEffectViewModel()),
                                 new("Drop Shadow", () => new WpfGraphicsDropShadowEffectViewModel())
+                            ),
+                        new NavigationMenuItem("Brush", () => new WpfGraphicsBrushViewModel())
+                            .AddChildren
+                            (
+                                new NavigationMenuItem("Solid", () => new WpfGraphicsSolidBrushViewModel()),
+                                new NavigationMenuItem("Linear Gradient", () => new WpfGraphicsLinearGradientBrushViewModel()),
+                                new NavigationMenuItem("Radial Gradient", () => new WpfGraphicsRadialGradientBrushViewModel()),
+                                new NavigationMenuItem("Image", () => new WpfGraphicsImageBrushViewModel())
                             )
                      )
             };

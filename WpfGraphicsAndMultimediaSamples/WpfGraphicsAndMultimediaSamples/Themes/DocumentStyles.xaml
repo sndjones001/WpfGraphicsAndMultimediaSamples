@@ -16,6 +16,16 @@
         <Setter Property="FontStyle" Value="{StaticResource HighlightFontStyle}" />
     </Style>
 
+    <Style x:Key="ParagraphCodeText" TargetType="Paragraph">
+        <Setter Property="Background" Value="{StaticResource CodeTextBackgroundColor}" />
+        <Setter Property="Foreground" Value="DarkSlateGray" />
+        <Setter Property="FontSize" Value="13" />
+        <Setter Property="FontFamily" Value="{StaticResource CodeFont}" />
+        <Setter Property="BorderBrush" Value="LightSteelBlue" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Padding" Value="10" />
+    </Style>
+
     <Style x:Key="HighlightCalculatedTextBlock" TargetType="TextBlock">
         <Setter Property="FontWeight" Value="DemiBold" />
         <Setter Property="FontSize" Value="{StaticResource HighlightCalculatedTextBlockFontSize}" />

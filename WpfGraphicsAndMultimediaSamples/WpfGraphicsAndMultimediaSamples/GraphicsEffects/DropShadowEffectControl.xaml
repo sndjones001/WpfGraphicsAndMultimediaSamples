@@ -136,6 +136,14 @@
                     </TableRow>
                 </TableRowGroup>
             </Table>
+            <Paragraph BorderBrush="LightGray" BorderThickness="1" TextAlignment="Left" Style="{StaticResource ParagraphCodeText}">
+                &lt;Rectangle.Effect&gt;
+                <LineBreak />
+                <Run Text="    " />
+                &lt;DropShadowEffect Direction="90" BlurRadius="10" ShadowDepth="10" Color="Black" Opacity="0.8"/&gt;
+                <LineBreak />
+                &lt;/Rectangle.Effect&gt;
+            </Paragraph>
         </FlowDocument>
     </FlowDocumentScrollViewer>
 </UserControl>

@@ -11,6 +11,7 @@
     <system:Double x:Key="HighlightCalculatedTextBlockFontSize">18</system:Double>
 
     <SolidColorBrush x:Key="CodeTextClassColor">#0065b3</SolidColorBrush>
+    <SolidColorBrush x:Key="CodeTextBackgroundColor">#f0f5f8</SolidColorBrush>
     <SolidColorBrush x:Key="TableBoderColor">SteelBlue</SolidColorBrush>
 
     <FontWeight x:Key="HeaderFontWeight">SemiBold</FontWeight>

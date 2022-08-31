@@ -21,11 +21,6 @@ namespace WpfGraphicsAndMultimediaSamples.Models
             set { _selectedView = value; OnPropertyChanged(); }
         }
 
-        public void NavigateTo(EPageViewControl viewType)
-        {
-            //SelectedView = NavigationBarView.PageViewModels[viewType];
-        }
-
         public void NavigateTo(IPageViewModel viewType)
         {
             SelectedView = viewType;
@@ -35,6 +30,7 @@ namespace WpfGraphicsAndMultimediaSamples.Models
         {
             NavigationBarView = navigationBarView;
             NavigationBarView.SetNavigator(this);
+            NavigationBarView.MenuCommand2.Execute(null);
         }
     }
 }

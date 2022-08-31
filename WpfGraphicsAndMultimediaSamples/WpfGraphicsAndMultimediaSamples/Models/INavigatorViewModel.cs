@@ -8,7 +8,6 @@ namespace WpfGraphicsAndMultimediaSamples.Models
 {
     public interface INavigatorViewModel
     {
-        void NavigateTo(EPageViewControl viewType);
         void NavigateTo(IPageViewModel viewType);
     }
 }

@@ -11,6 +11,9 @@ namespace WpfGraphicsAndMultimediaSamples.GraphicsBrushes
     {
         public static void Register(IServiceCollection services)
         {
+            services.AddTransient<WpfGraphicsBrushViewModel>();
+            services.AddTransient<WpfGraphicsSolidBrushViewModel>();
+            services.AddTransient<WpfGraphicsLinearGradientBrushViewModel>();
         }
     }
 }

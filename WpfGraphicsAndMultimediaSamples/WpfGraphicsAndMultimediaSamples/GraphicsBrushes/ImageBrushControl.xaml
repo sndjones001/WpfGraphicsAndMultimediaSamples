@@ -1,0 +1,66 @@
+﻿<UserControl x:Class="WpfGraphicsAndMultimediaSamples.GraphicsBrushes.ImageBrushControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfGraphicsAndMultimediaSamples.GraphicsBrushes"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <FlowDocumentScrollViewer>
+        <FlowDocument>
+            <Paragraph Style="{StaticResource HeaderParagraph}">
+                Image
+            </Paragraph>
+            <Paragraph>
+                A
+                <Span Style="{StaticResource SpanCodeText}">ImageBrush</Span> class paints an area with an image. The following example fills a rectangle.
+            </Paragraph>
+            <Paragraph>
+                <Rectangle Width="100" Height="100">
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="/Images/watermelonjuice.jpg"  />
+                    </Rectangle.Fill>
+                </Rectangle>
+            </Paragraph>
+            <Paragraph Style="{StaticResource HeaderParagraph}">
+                Drawing
+            </Paragraph>
+            <Paragraph>
+                A
+                <Span Style="{StaticResource SpanCodeText}">DrawingBrush</Span> class paints an area with an image. The following example fills a rectangle.
+            </Paragraph>
+            <Paragraph>
+                <Rectangle Width="75" Height="75">
+                    <Rectangle.Fill>
+                        <DrawingBrush Viewport="0,0,0.25,0.25" TileMode="Tile">
+                            <DrawingBrush.Drawing>
+                                <DrawingGroup>
+                                    <GeometryDrawing Brush="White">
+                                        <GeometryDrawing.Geometry>
+                                            <RectangleGeometry Rect="0,0,100,100" />
+                                        </GeometryDrawing.Geometry>
+                                    </GeometryDrawing>
+
+                                    <GeometryDrawing>
+                                        <GeometryDrawing.Geometry>
+                                            <GeometryGroup>
+                                                <RectangleGeometry Rect="0,0,50,50" />
+                                                <RectangleGeometry Rect="50,50,50,50" />
+                                            </GeometryGroup>
+                                        </GeometryDrawing.Geometry>
+                                        <GeometryDrawing.Brush>
+                                            <LinearGradientBrush>
+                                                <GradientStop Offset="0.0" Color="Black" />
+                                                <GradientStop Offset="1.0" Color="Gray" />
+                                            </LinearGradientBrush>
+                                        </GeometryDrawing.Brush>
+                                    </GeometryDrawing>
+                                </DrawingGroup>
+                            </DrawingBrush.Drawing>
+                        </DrawingBrush>
+                    </Rectangle.Fill>
+                </Rectangle>
+            </Paragraph>
+        </FlowDocument>
+    </FlowDocumentScrollViewer>
+</UserControl>

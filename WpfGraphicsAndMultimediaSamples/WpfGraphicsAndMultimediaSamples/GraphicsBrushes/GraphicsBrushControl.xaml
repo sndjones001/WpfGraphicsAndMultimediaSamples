@@ -6,7 +6,19 @@
              xmlns:local="clr-namespace:WpfGraphicsAndMultimediaSamples.GraphicsBrushes"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
-    </Grid>
+    <FlowDocumentScrollViewer>
+        <FlowDocument>
+            <Paragraph Style="{StaticResource HeaderParagraph}" >
+                Overview
+            </Paragraph>
+            <Paragraph>
+                A
+                <Span Style="{StaticResource SpanCodeText}">Brush</Span> class paint an 'area' on the screen. Theer are many types of brushes, viz., Solid, Gradient, Radial, pattern, image or drawing. Lots of Visual classes provide property to specify paint style. Some examples are,
+                <Span Style="{StaticResource SpanCodeText}">Background</Span> property of
+                <Span Style="{StaticResource SpanCodeText}">Border</Span> ,
+                <Span Style="{StaticResource SpanCodeText}">Panel</Span>,
+                <Span Style="{StaticResource SpanCodeText}">Control</Span> classes, etc. 
+            </Paragraph>
+        </FlowDocument>
+    </FlowDocumentScrollViewer>
 </UserControl>

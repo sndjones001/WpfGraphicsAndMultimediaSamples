@@ -20,6 +20,18 @@
     <DataTemplate DataType="{x:Type gbrush:WpfGraphicsBrushViewModel}">
         <gbrush:GraphicsBrushControl/>
     </DataTemplate>
+    <DataTemplate DataType="{x:Type gbrush:WpfGraphicsSolidBrushViewModel}">
+        <gbrush:SolidBrushControl/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type gbrush:WpfGraphicsLinearGradientBrushViewModel}">
+        <gbrush:LinearGradientBrushControl/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type gbrush:WpfGraphicsRadialGradientBrushViewModel}">
+        <gbrush:RadialGradientBrushControl/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type gbrush:WpfGraphicsImageBrushViewModel}">
+        <gbrush:ImageBrushControl/>
+    </DataTemplate>
     <!--#endregion-->
 
     <!--#region Wpf Graphics Main -->
